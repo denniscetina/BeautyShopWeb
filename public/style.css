@@ -1,0 +1,277 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Google icons*/
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+
+/*Header*/
+header{
+height: 100px;
+background: #4d4d5c;
+padding: 0 50px;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo{
+text-transform: uppercase;
+color: #6cc091;
+font-weight: 200;
+}
+.menu a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu{
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color: #805ACB;
+}
+
+#check{
+    display: none;
+}
+/*Banner*/
+#banner{
+    padding: 0 50px;
+    background-image: url(./mujer-pelo.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#banner::before{
+    content: '';
+    background: rgba(77, 77, 92,0.6);
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    left: 0;
+}
+.contenido-banner{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #C6A5FF;
+    border-radius: 25px;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-empezar:hover{
+    background: #C6A5FF;
+    
+}
+
+/*Sección consulta*/
+#section-info{
+    padding: 0 50px;
+    background-image: url(./hombre-pelo.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#section-info::before{
+    content: '';
+    background: rgba(77, 77, 92,0.6);
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    left: 0;
+}
+
+.contenido-section-info{
+    position: relative;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.contenido-section-info h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0px;
+}
+.contenido-section-info h3 span{
+    font-weight: 600;
+}
+
+.boton-consulta{
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #C6A5FF;
+    border-radius: 25px;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-consulta:hover{
+    background: #C6A5FF;
+}
+.ubicacion{
+    color: #fff;
+    height: 25%;
+    display: flex;
+    
+}
+
+.ubicacion h2{
+    font-size: 30px;
+    font-weight: 400;
+    
+}
+.ubicacion h2 span{
+    font-weight: 600;
+}
+/*Informacion*/
+#info{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#info svg{
+    border-radius: 100%;
+    size: 14px;
+    fill: #805ACB;
+}
+#info div{
+    padding: 30px 30px;
+}
+
+#info div h4{
+    color: #4d4d5c;
+    font-size: 20px;
+    margin: 15px 0px;
+}
+
+#info div p{
+    color: #4d4d5c;
+    font-size: 18px;
+}
+
+.espacio{
+    margin: 25px;
+}
+/*Boton*/
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #805ACB;
+    padding: 10px 30px;
+    border: 3px solid #805ACB;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #805ACB;
+    color: #fff;
+}
+
+footer{
+    background: #4d4d5c;
+    color: #cccccc4a;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+
+
+/*Responsive*/
+
+@media(max-width: 768px){
+    /*Header*/
+    .mostrar-menu,
+    .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #4d4d5c;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+    #check:checked ~ .menu{
+        right: 0;
+    }
+
+    /*Información responsive*/
+    #info{
+        flex-direction: column;
+    }
+   
+}

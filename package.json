@@ -1,0 +1,14 @@
+{
+  "name": "beautyshopw",
+  "version": "1.0.0",
+  "description": "Página web para una estética",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Yam",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
